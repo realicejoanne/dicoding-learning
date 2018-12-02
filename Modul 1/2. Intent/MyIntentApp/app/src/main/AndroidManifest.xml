@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MoveActivity" />
+        <activity android:name=".MoveWithDataActivity" />
+        <activity android:name=".MoveWithObjectActivity" />
+        <activity android:name=".MoveForResultActivity"></activity>
     </application>
 
 </manifest>
