@@ -8,6 +8,25 @@ import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
 
+/* Teori
+Activity, fragment, service, ui toolkit, broadcast receiver dijalankan di main thread atau ui thread
+
+Ada dua aturan yang harus kita perhatikan agar tercipta pengalaman pengguna yang baik ketika menerapkan
+proses komputasi intensif yang memakan waktu.
+
+    - Jangan memblok ui thread atau main thread. Ini berarti kita harus menciptakan worker threads atau async task.
+        Ini akan menjaga aplikasi tetap responsif.
+    - Jangan melakukan pemanggilan komponen ui widget (seperti textview, button, imageview dsb) didalam worker thread
+    atau thread yang sedang berjalan secara asynchronous.
+        Ini karena Android UI Toolkit merupakan komponen yang hanya berjalan pada ui thread.Thread adalah sekumpulan perintah (instruksi) yang dapat dilaksanakan (dieksekusi) secara beriringan dengan thread lainnya. Hal ini dicapai dengan menggunakan mekanisme time slice (ketika satu CPU melakukan perpindahan antara satu thread ke thread lainnya) atau multiprocess (ketika thread tersebut dijalankan oleh CPU yang berbeda dalam satu sistem).
+
+Thread adalah sekumpulan perintah (instruksi) yang dapat dilaksanakan (dieksekusi) secara beriringan dengan thread
+lainnya. Hal ini dicapai dengan menggunakan mekanisme time slice (ketika satu CPU melakukan perpindahan antara satu
+thread ke thread lainnya) atau multiprocess (ketika thread tersebut dijalankan oleh CPU yang berbeda dalam satu sistem).
+ */
+
+//Sumpah ga ngerti2 bngt inimah cuk, baca lagi aja teorinya.
+
 public class MainActivity extends AppCompatActivity implements MyAsyncCallback {
 
     TextView tvStatus;
