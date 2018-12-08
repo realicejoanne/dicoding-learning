@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" />
+
+<!--
+    FrameLayout memiliki sifat sebagai berikut:
+    semua komponen view di dalam FrameLayout bersifat menumpuk.
+    Bila pada suatu hirarki FrameLayout terdapat satu view
+    dengan posisi paling atas, maka view tersebut akan menjadi
+    alas untuk view di atasnya.
+-->

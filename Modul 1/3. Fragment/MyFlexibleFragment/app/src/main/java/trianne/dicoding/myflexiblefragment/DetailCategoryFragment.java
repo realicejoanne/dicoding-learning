@@ -1,0 +1,113 @@
+package trianne.dicoding.myflexiblefragment;
+
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+//Belajar mengirim data ke Fragment
+public class DetailCategoryFragment extends Fragment implements View.OnClickListener {
+
+    TextView tvCategoryName;
+    TextView tvCategoryDescription;
+    Button btnProfile;
+    Button btnShowDialog;
+
+    //Panggil bundle
+    public static String EXTRA_NAME = "extra_name";
+    public static String EXTRA_DESCRIPTION = "extra_description";
+
+    //Panggil getter setter
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public DetailCategoryFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_detail_category, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        //Meletakkan value dr data yg dikirim td
+        tvCategoryName = view.findViewById(R.id.tv_category_name);
+        tvCategoryDescription = view.findViewById(R.id.tv_category_description);
+
+        btnProfile = view.findViewById(R.id.btn_profile);
+        btnProfile.setOnClickListener(this);
+        btnShowDialog = view.findViewById(R.id.btn_show_dialog);
+        btnShowDialog.setOnClickListener(this);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if (savedInstanceState != null) {
+            String descFromBundle = savedInstanceState.getString(EXTRA_DESCRIPTION);
+            setDescription(descFromBundle);
+        }
+
+        if (getArguments() != null) {
+            String categoryName = getArguments().getString(EXTRA_NAME);
+            tvCategoryName.setText(categoryName);
+            tvCategoryDescription.setText(getDescription());
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(EXTRA_DESCRIPTION, getDescription());
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_profile:
+                //Memanggil activity profile
+                //activity bertugas sebagai navigasi dan fragment berfungsi untuk menampilkan data yang melakukan logic aplikasi
+                Intent mIntent = new Intent(getActivity(), ProfileActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btn_show_dialog:
+                OptionDialogFragment mOptionDialogFragment = new OptionDialogFragment();
+                //Kita tidak menggunakan getFragmentManager() saat ini, tapi getChildFragmentManager()
+                //Sebuah nested fragment / fragment bersarang.
+                //Karena OptionDialogFragment dipanggil di dalam DetailDialogFragment.
+                FragmentManager mFragmentManager = getChildFragmentManager();
+
+                //Menampilkan obyek OptionDialogFragment ke layar
+                mOptionDialogFragment.show(mFragmentManager, OptionDialogFragment.class.getSimpleName());
+                break;
+        }
+    }
+    OptionDialogFragment.OnOptionDialogListener optionDialogListener = new OptionDialogFragment.OnOptionDialogListener() {
+        @Override
+        public void onOptionChosen(String text) {
+            //onOptionChoosen() akan dipanggil untuk menampilkan nilai dari pilihan yang dipilih pada Toast.
+            Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT).show();
+        }
+    };
+}
