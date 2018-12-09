@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
+//JOW INI BUG KUMAHA REPEATING MESSAGENYA MUNCULNYA YG AWAL
+//KALO MISALNYA MAU GANTI WAKTU GABISA LANGSUNG HARUS CANCEL DULU CKCK
+
 public class AlarmReceiver extends BroadcastReceiver {
     //Tipe Alarm
     public static final String TYPE_ONE_TIME = "OneTimeAlarm";
@@ -89,7 +92,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(timeArray[0]));
         calendar.set(Calendar.MINUTE, Integer.parseInt(timeArray[1]));
         calendar.set(Calendar.SECOND, 0);
-        int requestCode = NOTIF_ID_ONETIME;
+        int requestCode = NOTIF_ID_REPEATING; //di buku typo ihh
         PendingIntent pendingIntent =  PendingIntent.getBroadcast(context, requestCode, intent, 0);
         //Yang membedakan pada setOneTimeAlarm() kita menggunakan metode set()
         //sedangkan pada setRepeatingAlarm() kita menggunakan setInexactRepeating()
