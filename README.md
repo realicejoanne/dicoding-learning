@@ -21,7 +21,8 @@ Go to: https://www.dicoding.com
 		* Kembangin untuk bikin notifikasi yang bisa diklik
 	* Loader :large_blue_circle:
 		* Bug pas klik salah satu contact trus mau balik lagi gabisa pake back
-		* Kembangin untuk projek modul 1 (list viewnya)
+		* Kembangin app 1 untuk projek modul 1 (list viewnya)
+		* Kembangin app 2 untuk projek modul 1 (fitur search)
 	* Error/Debug
 	* Unit Testing & Design Pattern
 	* Project Catalogue Movie
