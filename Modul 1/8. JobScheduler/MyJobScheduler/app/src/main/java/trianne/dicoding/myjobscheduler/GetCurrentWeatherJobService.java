@@ -6,7 +6,6 @@ import android.app.job.JobService;
 import android.content.Context;
 import android.media.RingtoneManager;
 import android.net.Uri;
-import android.preference.PreferenceActivity;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
