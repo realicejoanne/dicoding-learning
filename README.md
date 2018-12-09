@@ -17,8 +17,11 @@ Go to: https://www.dicoding.com
 		* Bug gimana biar notifikasi diatur jangan terlalu sering
 		* Kembangin jadi bisa atur mau kota apa di appnya
 		* Kembangin untuk projek modul 1 (pemanggilan APInya)
-	* Navigasi, Task, Back Stack
-	* Loader
+	* Navigasi, Task, Back Stack :large_blue_circle:
+		* Kembangin untuk bikin notifikasi yang bisa diklik
+	* Loader :large_blue_circle:
+		* Bug pas klik salah satu contact trus mau balik lagi gabisa pake back
+		* Kembangin untuk projek modul 1 (list viewnya)
 	* Error/Debug
 	* Unit Testing & Design Pattern
 	* Project Catalogue Movie
