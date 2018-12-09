@@ -5,7 +5,7 @@ Go to: https://www.dicoding.com
 
 ## [Menjadi Android Developer Expert](https://www.dicoding.com/academies/14/)
 - [x] Modul 0 Introduction
-- [ ] Modul 1 Fundamentals
+- [x] Modul 1 Fundamentals
 	* Threads, Handler, AsyncTask :red_circle:
 	* Service :red_circle:
 	* Broadcast Receiver :red_circle:
@@ -23,9 +23,7 @@ Go to: https://www.dicoding.com
 		* Bug pas klik salah satu contact trus mau balik lagi gabisa pake back
 		* Kembangin app 1 untuk projek modul 1 (list viewnya)
 		* Kembangin app 2 untuk projek modul 1 (fitur search)
-	* Error/Debug
-	* Unit Testing & Design Pattern
-	* Project Catalogue Movie
+	* Project Catalogue Movie :large_blue_circle:
 - [ ] Modul 2 Application UI and UX
 - [ ] Modul 3 Local Storage Data
 
