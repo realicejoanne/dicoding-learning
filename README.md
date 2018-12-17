@@ -25,8 +25,15 @@ __Pelajari lagi yang diberi tanda :red_circle:__
 		* Bug pas klik salah satu contact trus mau balik lagi gabisa pake back
 		* Kembangin app 1 untuk projek modul 1 (list viewnya)
 		* Kembangin app 2 untuk projek modul 1 (fitur search)
-	* Project Catalogue Movie (done)
 - [ ] Modul 2 Application UI and UX
+	* View dan ViewGroup
+	* Custom Application Style dan Theme
+	* RecyclerView
+	* Action Bar
+	* Navigation Drawer
+	* Localization
+	* Content Description
+	* Pengujian UI dengan Espresso
 - [ ] Modul 3 Local Storage Data
 
 will be updated soon...
