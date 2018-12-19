@@ -36,9 +36,9 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 		* Kembangin untuk projek modul 2 (cardviewnya)
 	* Action Bar
 	* Navigation Drawer
-		* Bug judul di action bar masih belum bisa dijaga ketika terjadi perubahan konfigurasi. Coba ikuti [link ini](https://github.com/dicodingacademy/a14-made-labs2/tree/master/04.Navigation/MyNavigationDrawer).
+		* Tantangan judul di action bar masih belum bisa dijaga ketika terjadi perubahan konfigurasi jadi coba nanti ikuti [link ini](https://github.com/dicodingacademy/a14-made-labs2/tree/master/04.Navigation/MyNavigationDrawer).
 	* Localization
-	* Content Description
+		* Kembangin untuk projek modul 2 (intent localization)
 	* Pengujian UI dengan Espresso
 - [ ] Modul 3 Local Storage Data
 

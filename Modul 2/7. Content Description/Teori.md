@@ -1,4 +1,4 @@
-# Teori Doang Ini #
+# Teori Content Description #
 
 ## TalkBack app (sudah ada default di Android tapi jika tidak bisa unduh ini)
 https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback&hl=en
@@ -6,15 +6,15 @@ https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback
 ## Implementasi contentDescription
 Hanya perlu menambah satu baris seperti pada contoh berikut ini:
 
-    `<Button
+    <Button
         android:id="@+id/pause_button"
         android:src="@drawable/pause"
-        android:contentDescription="@string/pause"/>`
+        android:contentDescription="@string/pause"/>
 
 Hasil yang sama dapat Anda peroleh dengan menggunakan metode berikut:
 
-    `String contentDescription = "Select" + strValues[position];
-    label.setContentDescription(contentDescription);`
+    String contentDescription = "Select" + strValues[position];
+    label.setContentDescription(contentDescription);
 
 ## Cara menjalankan
 Untuk menjalankan proyek ini Anda harus mengaktifkan komponen TalkBack yang terdapat di Settings > Accessibility > TalkBack. Pastikan bahwa TalkBack sudah terpasang bila Anda tidak menemukan menu ini. Aktifkan fitur TalkBack dengan menggeser tombol toggle On-Off.
