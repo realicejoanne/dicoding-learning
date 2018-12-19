@@ -3,14 +3,18 @@ Dicoding sebagai satu-satunya Google Authorized Training Partner di Indonesia te
 
 Go to: https://www.dicoding.com
 
-__Pelajari lagi yang diberi tanda :red_circle:__
-
 ## [Menjadi Android Developer Expert](https://www.dicoding.com/academies/14/)
+
+__Materi yang harus dipelajari lebih dalam lagi:__
+
 - [x] Modul 0 Introduction
 - [x] Modul 1 Fundamentals
-	* Threads, Handler, AsyncTask :red_circle:
-	* Service :red_circle:
-	* Broadcast Receiver :red_circle:
+	* Threads, Handler, AsyncTask
+		* Belum paham cara kerjanya
+	* Service
+		* Belum paham cara kerjanya
+	* Broadcast Receiver
+		* Belum paham cara kerjanya
 	* Alarm Manager
 		* Bug gimana biar bisa timpa repeating alarm yang udah ada
 		* Kembangin jadi banyak alarm diset bersamaan
@@ -27,8 +31,9 @@ __Pelajari lagi yang diberi tanda :red_circle:__
 		* Kembangin app 2 untuk projek modul 1 (fitur search)
 - [ ] Modul 2 Application UI and UX
 	* View dan ViewGroup
-	* Custom Application Style dan Theme
 	* RecyclerView
+		* Di modul masih banyak code yang ngaco sehingga banyak errornya
+		* Kembangin untuk projek modul 2 (cardviewnya)
 	* Action Bar
 	* Navigation Drawer
 	* Localization
