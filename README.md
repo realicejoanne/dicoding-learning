@@ -41,6 +41,19 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 		* Kembangin untuk projek modul 2 (intent localization)
 	* Pengujian UI dengan Espresso
 - [ ] Modul 3 Local Storage Data
+	* Read and Write File
+	* SoundPool dan Media Player
+	* SharedPreferences
+	* Penyimpanan Data dengan Menggunakan SQLite
+	* Bulk Insert Query Optimization dan Preload Data
+	* Final Project 1: Kamus
+	* Content Provider
+	* Final Project 2: MovieCatalogue
+- [ ] Modul 4 Extended Application
+	* Android Widgets
+	* Android Notification
+	* Firebase Cloud Messaging
+	* Final Project
 
 will be updated soon...
 
