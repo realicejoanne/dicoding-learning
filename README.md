@@ -29,7 +29,7 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 		* Bug pas klik salah satu contact trus mau balik lagi gabisa pake back
 		* Kembangin app 1 untuk projek modul 1 (list viewnya)
 		* Kembangin app 2 untuk projek modul 1 (fitur search)
-- [ ] Modul 2 Application UI and UX
+- [x] Modul 2 Application UI and UX
 	* View dan ViewGroup
 	* RecyclerView
 		* Di modul masih banyak code yang ngaco sehingga banyak errornya
