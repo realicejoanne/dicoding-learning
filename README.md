@@ -36,13 +36,16 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 		* Kembangin untuk projek modul 2 (cardviewnya)
 	* Action Bar
 	* Navigation Drawer
-		* Tantangan judul di action bar masih belum bisa dijaga ketika terjadi perubahan konfigurasi jadi coba nanti ikuti [link ini](https://github.com/dicodingacademy/a14-made-labs2/tree/master/04.Navigation/MyNavigationDrawer)
+		* Tantangan judul di action bar ketika terjadi perubahan konfigurasi nanti ikuti [link ini](https://github.com/dicodingacademy/a14-made-labs2/tree/master/04.Navigation/MyNavigationDrawer)
 	* Localization
 		* Kembangin untuk projek modul 2 (intent localization)
 	* Pengujian UI dengan Espresso
 - [ ] Modul 3 Local Storage Data
 	* Read and Write File
+		* Karena penting jadi pelajari lagi
 	* SoundPool dan Media Player
+		* Cari cara gimana biar media playernya bisa utk mp3
+		* Bug gimana biar udah distop tapi bisa play lagi media playernya
 	* SharedPreferences
 	* Penyimpanan Data dengan Menggunakan SQLite
 	* Bulk Insert Query Optimization dan Preload Data
