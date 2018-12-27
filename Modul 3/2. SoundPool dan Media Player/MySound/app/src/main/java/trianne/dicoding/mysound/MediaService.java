@@ -48,7 +48,7 @@ public class MediaService extends Service implements MediaPlayer.OnPreparedListe
                 break;
             case ACTION_PLAY:
                 if (!mMediaPlayer.isPlaying()) {
-                    mMediaPlayer.prepareAsync();
+                    mMediaPlayer.prepareAsync(); //prosesnya asynchronous
                 }
                 break;
             case ACTION_STOP:

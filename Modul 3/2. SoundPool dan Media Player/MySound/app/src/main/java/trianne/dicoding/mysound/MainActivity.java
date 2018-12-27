@@ -10,6 +10,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/*
+Soundpool
+
+Soundpool menyimpan data audio di memori tanpa dikompresi lebih dahulu.
+Komponen ini lebih cepat karena data mentah (raw) di-decode menggunakan 16-bit PCM mono atau stereo stream.
+Komponen ini lebih cocok digunakan untuk memainkan audio yang berdurasi pendek.
+Untuk memainkan soundpool, berkas audio harus dimuat terlebih dahulu hingga selesai.
+
+Mediaplayer
+
+Ketika berkas audio lebih dari 1MB maka komponen mediaplayer lebih cocok untuk digunakan.
+Mediaplayer juga mendukung playback control seperti pause, seek, start, dan lainnya.
+Proses decode dilakukan secara realtime, sehingga tidak ada masalah terkait ukuran audio yang sedang dimainkan.
+Kelebihan lainnya adalah mediaplayer bisa memainkan audio dari internet.
+Ini membuatnya lebih dinamis untuk digunakan bila dibandingkan dengan soundpool.
+ */
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btnSound;
