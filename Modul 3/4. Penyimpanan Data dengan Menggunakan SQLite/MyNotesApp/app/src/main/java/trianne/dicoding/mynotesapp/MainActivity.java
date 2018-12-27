@@ -22,6 +22,29 @@ import trianne.dicoding.mynotesapp.entity.Note;
 import static trianne.dicoding.mynotesapp.FormAddUpdateActivity.REQUEST_UPDATE;
 
 /*
+SQLite ini dipakai oleh aplikasi-aplikasi native dengan penyimpanan data yang tidak bersifat kompleks
+seperti Google Chrome dan Firefox contohnya untuk menyimpan bookmark website dan juga aplikasi mobile
+seperti aplikasi contact bawaan sebagai penyimpanan data lokal yang mendukung proses sinkronisasi ke server.
+
+SQLite hanya mendukung beberapa tipe data seperti text untuk penyimpanan data dalam bentuk string,
+int untuk menyimpan data dalam bentuk bilang bulat, dan real untuk penyimpan data dalam bentuk bilangan
+pecahan/bilangan presisi. Jadi apabila ingin menyimpan data yang tidak didukung oleh SQLite maka diharuskan
+dilakukan proses konversi tipe data yang sesuai dengan tipe data yang didukung sebelum melakukan penyimpanan data.
+
+Jika merencanakan data yang disimpan dalam jumlah besar, maka sebaiknya semua proses dilakukan secara asynchronous.
+Kamu bisa menggunakan AsyncTask atau Loader untuk melakukan ini.
+
+Langkah membuat database:
+1. Mendefinisikan skema data yang akan diimplementasikan ke dalam database (DatabaseContract)
+2. Buat DatabaseHelper untuk menjalankan fungsi-fungsi dalam Data Definition Language (DDL) pada sebuah database.
+    Create table, delete table. Cek https://developer.android.com/reference/android/database/sqlite/SQLiteOpenHelper.html
+3. Membuat fungsi untuk manipulasi data dalam tabel (DML).
+    Create, update, delete from table.
+4. Mengambil Data (READ) dengan Method query() dan rawQuery().
+5. Mengatur keamanan database dengan SQLcipher cek https://www.zetetic.net/sqlcipher/sqlcipher-for-android/
+ */
+
+/*
 Tugas utama MainActivity:
 
     Menampilkan data dari database pada table note secara descending (menurun).

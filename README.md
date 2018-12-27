@@ -43,13 +43,17 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 - [ ] Modul 3 Local Storage Data
 	* Read and Write File
 		* Karena penting jadi pelajari lagi
+		* Kembangin untuk projek modul 3 yang kedua
 	* SoundPool dan Media Player
 		* Cari cara gimana biar media playernya bisa utk mp3
 		* Bug gimana biar udah distop tapi bisa play lagi media playernya dari awal bukan kayak dipause (service bisa tapi malah jadi kayak dipause)
 		* Tantangan tambah fungsi pause
 		* Tantangan bikin aplikasi streaming radio
 	* SharedPreferences
+		* Belum paham cara kerjanya
 	* Penyimpanan Data dengan Menggunakan SQLite
+		* Karena penting jadi pelajari lagi
+		* Kembangin untuk kedua projek modul 3
 	* Bulk Insert Query Optimization dan Preload Data
 	* Final Project 1: Kamus
 	* Content Provider
