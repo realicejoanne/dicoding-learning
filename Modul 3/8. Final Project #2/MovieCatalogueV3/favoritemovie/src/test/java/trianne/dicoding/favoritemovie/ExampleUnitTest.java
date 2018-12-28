@@ -1,4 +1,4 @@
-package trianne.dicoding.moviecataloguev3;
+package trianne.dicoding.favoritemovie;
 
 import org.junit.Test;
 

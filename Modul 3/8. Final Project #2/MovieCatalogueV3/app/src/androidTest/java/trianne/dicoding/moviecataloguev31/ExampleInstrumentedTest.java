@@ -1,4 +1,4 @@
-package trianne.dicoding.moviecataloguev3;
+package trianne.dicoding.moviecataloguev31;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("trianne.dicoding.moviecataloguev3", appContext.getPackageName());
+        assertEquals("trianne.dicoding.moviecataloguev31", appContext.getPackageName());
     }
 }

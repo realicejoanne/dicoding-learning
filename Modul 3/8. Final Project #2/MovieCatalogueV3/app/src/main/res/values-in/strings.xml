@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MovieCatalogue v2</string>
+
+    <!-- MOVIE COMPONENT -->
+    <string name="title">Judul</string>
+    <string name="description">Deskripsi</string>
+    <string name="date">Tanggal Rilis</string>
+    <string name="favorite">Favorit</string>
+    <string name="share">Sebar</string>
+
+    <!-- USER COMPONENT -->
+    <string name="name">Patricia Joanne</string>
+    <string name="email">trianne24@gmail.com</string>
+
+    <!-- NAV -->
+    <string name="nav_home">Beranda</string>
+    <string name="nav_search">Cari Film</string>
+    <string name="nav_settings">Pengaturan</string>
+    <string name="nav_info">Tentang</string>
+    <string name="nav_np">Telah Hadir</string>
+    <string name="nav_up">Akan Datang</string>
+    <string name="nav_fav">Film Favorit</string>
+    <string name="nav_db">Database</string>
+    <string name="navigation_drawer_open">Buka navigation drawer</string>
+    <string name="navigation_drawer_close">Tutup navigation drawer</string>
+
+    <!-- SEARCH -->
+    <string name="type_title">Cari film…</string>
+    <string name="search">Cari</string>
+
+</resources>
