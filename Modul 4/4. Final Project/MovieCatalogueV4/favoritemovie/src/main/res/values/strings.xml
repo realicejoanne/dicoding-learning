@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Favorite Movies</string>
+
+    <!-- MOVIE COMPONENT -->
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="date">Release Date</string>
+    <string name="favorite">Favorite</string>
+
+    <string name="nav_settings">Settings</string>
+</resources>

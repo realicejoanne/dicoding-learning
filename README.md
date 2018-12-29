@@ -22,28 +22,28 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 	* Job Scheduler
 		* Bug gimana biar notifikasi diatur jangan terlalu sering
 		* Kembangin jadi bisa atur mau kota apa di appnya
-		* Kembangin untuk projek modul 1 (pemanggilan APInya)
+		* Penting untuk projek modul 1 (pemanggilan APInya)
 	* Navigasi, Task, Back Stack
 		* Kembangin untuk bikin notifikasi yang bisa diklik
 	* Loader
 		* Bug pas klik salah satu contact trus mau balik lagi gabisa pake back
-		* Kembangin app 1 untuk projek modul 1 (list viewnya)
-		* Kembangin app 2 untuk projek modul 1 (fitur search)
+		* App 1 penting untuk projek modul 1 (list viewnya)
+		* App 2 penting untuk projek modul 1 (fitur search)
 - [x] Modul 2 Application UI and UX
 	* View dan ViewGroup
 	* RecyclerView
 		* Di modul masih banyak code yang ngaco sehingga banyak errornya
-		* Kembangin untuk projek modul 2 (cardviewnya)
+		* Penting untuk projek modul 2 (cardviewnya)
 	* Action Bar
 	* Navigation Drawer
 		* Tantangan judul di action bar supaya bisa tetap terjaga ketika terjadi perubahan konfigurasi nanti ikuti [link ini](https://github.com/dicodingacademy/a14-made-labs2/tree/master/04.Navigation/MyNavigationDrawer)
 	* Localization
-		* Kembangin untuk projek modul 2 (intent localization)
+		* Penting untuk projek modul 2 (intent localization)
 	* Pengujian UI dengan Espresso
-- [ ] Modul 3 Local Storage Data
+- [x] Modul 3 Local Storage Data
 	* Read and Write File
 		* Karena penting jadi pelajari lagi
-		* Kembangin untuk projek modul 3 yang kedua
+		* Penting untuk projek modul 3 yang kedua
 	* SoundPool dan Media Player
 		* Cari cara gimana biar media playernya bisa utk mp3
 		* Bug gimana biar udah distop tapi bisa play lagi media playernya dari awal bukan kayak dipause (service bisa tapi malah jadi kayak dipause)
@@ -53,17 +53,19 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 		* Belum paham cara kerjanya
 	* Penyimpanan Data dengan Menggunakan SQLite
 		* Karena penting jadi pelajari lagi
-		* Kembangin untuk kedua projek modul 3
+		* Penting untuk kedua projek modul 3
 	* Bulk Insert Query Optimization dan Preload Data
-	* Final Project 1: Kamus
+		* Belum paham cara kerjanya
 	* Content Provider
+		* Karena penting jadi pelajari lagi
+		* Penting untuk projek modul 3 yang kedua (buat module baru)
 	* Final Project 2: MovieCatalogue
+		* Bug di aplikasi favoritemovie pas klik detail ga sesuai dengan film yang diklik
 - [ ] Modul 4 Extended Application
 	* Android Widgets
+		* Penting untuk projek modul 4
 	* Android Notification
+		* Penting untuk projek modul 4
 	* Firebase Cloud Messaging
+		* Karena penting jadi pelajari lagi
 	* Final Project
-
-will be updated soon...
-
-

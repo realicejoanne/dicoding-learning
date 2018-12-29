@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MovieCatalogue v3</string>
+
+    <!-- MOVIE COMPONENT -->
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="date">Release Date</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+
+    <!-- USER COMPONENT -->
+    <string name="name">Patricia Joanne</string>
+    <string name="email">trianne24@gmail.com</string>
+
+    <!-- NAV -->
+    <string name="nav_home">Home</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_info">About</string>
+    <string name="nav_np">Now Playing</string>
+    <string name="nav_up">Upcoming</string>
+    <string name="nav_fav">Favorite</string>
+    <string name="nav_db">Database</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- SEARCH -->
+    <string name="type_title">Search movie…</string>
+    <string name="search">Search</string>
+
+</resources>
