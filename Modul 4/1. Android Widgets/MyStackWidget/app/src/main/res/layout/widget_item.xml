@@ -11,5 +11,5 @@
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/starwars1" />
+        app:srcCompat="@drawable/darth_vader" />
 </LinearLayout>

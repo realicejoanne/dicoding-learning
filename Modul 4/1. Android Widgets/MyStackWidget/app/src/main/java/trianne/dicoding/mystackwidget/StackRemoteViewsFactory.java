@@ -29,16 +29,16 @@ class StackRemoteViewsFactory implements
     //Proses load di sini tidak boleh lebih dari 20 detik, karena jika melebihi dari 20 detik
     //akan terjadi ANR (Application Not Responding)
     public void onCreate() {
-        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(),
-                R.drawable.starwars1));
-        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(),
-                R.drawable.starwars2));
-        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(),
-                R.drawable.starwars3));
-        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(),
-                R.drawable.starwars4));
-        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(),
-                R.drawable.starwars5));
+        /*
+        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.starwars1));
+        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.starwars2));
+        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.starwars3));
+        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.starwars4));
+        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.starwars5));
+        */
+        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.star_wars_logo));
+        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.darth_vader));
+        mWidgetItems.add(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.storm_trooper));
     }
 
     @Override

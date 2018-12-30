@@ -63,7 +63,8 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 		* Bug di aplikasi favoritemovie pas klik detail ga sesuai dengan film yang diklik
 - [ ] Modul 4 Extended Application
 	* Android Widgets
-		* Penting untuk projek modul 4
+		* Bug entah kenapa fotonya ngga muncul atau tiba2 outofmemoryexception
+		* App 2 penting untuk projek modul 4 (stack widgetnya)
 	* Android Notification
 		* Penting untuk projek modul 4
 	* Firebase Cloud Messaging
