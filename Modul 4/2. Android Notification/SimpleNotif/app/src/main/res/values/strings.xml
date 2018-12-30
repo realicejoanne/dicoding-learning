@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SimpleNotif</string>
+    <string name="content_title">Ini content title</string>
+    <string name="content_text">Ini content text</string>
+    <string name="subtext">Ini sub text</string>
+    <string name="send_notif">Send Notification</string>
 </resources>
