@@ -61,7 +61,7 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 		* Penting untuk projek modul 3 yang kedua (buat module baru)
 	* Final Project 2: MovieCatalogue
 		* Bug di aplikasi favoritemovie pas klik detail ga sesuai dengan film yang diklik
-- [ ] Modul 4 Extended Application
+- [x] Modul 4 Extended Application
 	* Android Widgets
 		* Bug entah kenapa fotonya ngga muncul atau tiba2 outofmemoryexception
 		* App 2 penting untuk projek modul 4 (stack widgetnya)
@@ -71,3 +71,5 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 		* Karena penting jadi pelajari lagi
 	* Final Project
 		* Bug kalo dirotate beberapa kali hilang datanya tapi kalo sekali bisa
+
+Note: Masih ada beberapa yang harus direvisi sambil dipelajari lagi!
