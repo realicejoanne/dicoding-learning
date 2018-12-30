@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialKeyguardLayout="@layout/bilangan_acak_widget"
+    android:initialLayout="@layout/bilangan_acak_widget"
+    android:minWidth="40dp"
+    android:minHeight="40dp"
+    android:previewImage="@drawable/example_appwidget_preview"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="0"
+    android:widgetCategory="home_screen">
+
+    <!--
+    Mengganti properties updatePeriodMilis menjadi 0
+    akan mematikan update berkala yang otomatis dilakukan
+    oleh widget. Ini penting agar tidak terjadi konflik
+    antara update otomatis dari widget dengan update
+    yang berasal dari jobscheduler.
+    -->
+
+</appwidget-provider>

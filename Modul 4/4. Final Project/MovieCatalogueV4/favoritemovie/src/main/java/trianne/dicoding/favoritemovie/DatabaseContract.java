@@ -5,7 +5,7 @@ import android.net.Uri;
 import android.provider.BaseColumns;
 
 public class DatabaseContract {
-    public static final String AUTHORITY = "trianne.dicoding.moviecataloguev31";
+    public static final String AUTHORITY = "trianne.dicoding.moviecataloguev4";
     public static final String SCHEME = "content";
 
     public static final class FavoriteColumns implements BaseColumns {

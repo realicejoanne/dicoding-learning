@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MovieCatalogue v2</string>
+    <string name="app_name">MovieCatalogue v3</string>
 
     <!-- MOVIE COMPONENT -->
     <string name="title">Judul</string>
