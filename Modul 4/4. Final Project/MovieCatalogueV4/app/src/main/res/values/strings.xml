@@ -19,7 +19,7 @@
     <string name="nav_info">About</string>
     <string name="nav_np">Now Playing</string>
     <string name="nav_up">Upcoming</string>
-    <string name="nav_fav">Favorite</string>
+    <string name="nav_fav">My Favorite</string>
     <string name="nav_db">Database</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -31,5 +31,14 @@
     <!-- REMINDER -->
     <string name="daily_reminder">Daily Reminder</string>
     <string name="release_reminder">Release Reminder</string>
+    <string name="daily_save_reminder">Save Daily Reminder</string>
+    <string name="daily_cancel_reminder">Cancel Daily Reminder</string>
+    <string name="release_save_reminder">Save Release Reminder</string>
+    <string name="release_cancel_reminder">Cancel Release Reminder</string>
+
+    <!-- WIDGET -->
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="no_data">NO DATA</string>
 
 </resources>

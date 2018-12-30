@@ -11,11 +11,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Switch;
 
+import java.util.Objects;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import trianne.dicoding.moviecataloguev4.db.DatabaseContract;
+import trianne.dicoding.moviecataloguev4.reminder.ReminderPreferences;
+import trianne.dicoding.moviecataloguev4.reminder.ReminderReceiver;
+import trianne.dicoding.moviecataloguev4.reminder.ReminderReleaseReceiver;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -26,7 +31,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     public ReminderReceiver reminderReceiverDaily;
     public ReminderReleaseReceiver reminderReceiverRelease;
-    public ReminderPreference reminderPreference;
+    public ReminderPreferences reminderPreference;
     public SharedPreferences sReleaseReminder, sDailyReminder;
     public SharedPreferences.Editor editorReleaseReminder, editorDailyReminder;
 
@@ -38,10 +43,10 @@ public class SettingsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         reminderReceiverDaily = new ReminderReceiver();
         reminderReceiverRelease = new ReminderReleaseReceiver();
-        reminderPreference = new ReminderPreference(this);
+        reminderPreference = new ReminderPreferences(this);
         setPreference();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true); //???
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setTitle("Settings");
     }
@@ -56,12 +61,12 @@ public class SettingsActivity extends AppCompatActivity {
         editorDailyReminder = sDailyReminder.edit();
         if (isChecked) {
             editorDailyReminder.putBoolean(DatabaseContract.KEY_FIELD_DAILY_REMINDER, true);
-            editorDailyReminder.commit();
+            editorDailyReminder.apply();
             dailyReminderOn();
         }
         else {
             editorDailyReminder.putBoolean(DatabaseContract.KEY_FIELD_DAILY_REMINDER, false);
-            editorDailyReminder.commit();
+            editorDailyReminder.apply();
             dailyReminderOff();
         }
     }
@@ -71,12 +76,12 @@ public class SettingsActivity extends AppCompatActivity {
         editorReleaseReminder = sReleaseReminder.edit();
         if (isChecked) {
             editorReleaseReminder.putBoolean(DatabaseContract.KEY_FIELD_UPCOMING_REMINDER, true);
-            editorReleaseReminder.commit();
+            editorReleaseReminder.apply();
             releaseReminderOn();
         }
         else {
             editorReleaseReminder.putBoolean(DatabaseContract.KEY_FIELD_UPCOMING_REMINDER, false);
-            editorReleaseReminder.commit();
+            editorReleaseReminder.apply();
             releaseReminderOff();
         }
     }
@@ -97,7 +102,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void releaseReminderOn() {
-        String time = "08:00";
+        String time = "08:00"; //waktu jam 8 pagi
         String message = "Release Movies Today";
         reminderPreference.setReminderReleaseTime(time);
         reminderPreference.setReminderReleaseMessage(message);
@@ -109,7 +114,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void dailyReminderOn() {
-        String time = "07:00";
+        String time = "07:00"; //waktu jam 7 pagi
         String message = "Daily Movies Today";
         reminderPreference.setReminderDailyTime(time);
         reminderPreference.setReminderDailyMessage(message);

@@ -66,7 +66,8 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 		* Bug entah kenapa fotonya ngga muncul atau tiba2 outofmemoryexception
 		* App 2 penting untuk projek modul 4 (stack widgetnya)
 	* Android Notification
-		* Penting untuk projek modul 4
+		* App 1 penting untuk projek modul 4
 	* Firebase Cloud Messaging
 		* Karena penting jadi pelajari lagi
 	* Final Project
+		* Bug kalo dirotate beberapa kali hilang datanya tapi kalo sekali bisa

@@ -19,7 +19,7 @@
     <string name="nav_info">Tentang</string>
     <string name="nav_np">Telah Hadir</string>
     <string name="nav_up">Akan Datang</string>
-    <string name="nav_fav">Film Favorit</string>
+    <string name="nav_fav">Favorit Saya</string>
     <string name="nav_db">Database</string>
     <string name="navigation_drawer_open">Buka navigation drawer</string>
     <string name="navigation_drawer_close">Tutup navigation drawer</string>
@@ -31,5 +31,14 @@
     <!-- REMINDER -->
     <string name="daily_reminder">Pengingat Harian</string>
     <string name="release_reminder">Pengingat Rilis Film</string>
+    <string name="daily_save_reminder">Simpan Pengingat Harian</string>
+    <string name="daily_cancel_reminder">Batalkan Pengingat Harian</string>
+    <string name="release_save_reminder">Simpan Pengingat Rilis Film</string>
+    <string name="release_cancel_reminder">Batalkan Pengingat Rilis Film</string>
+
+    <!-- WIDGET -->
+    <string name="appwidget_text">CONTOH</string>
+    <string name="add_widget">Tambah Widget</string>
+    <string name="no_data">TIDAK ADA DATA</string>
 
 </resources>
