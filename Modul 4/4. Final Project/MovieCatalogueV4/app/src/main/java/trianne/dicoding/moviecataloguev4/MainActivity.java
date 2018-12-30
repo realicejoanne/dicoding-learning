@@ -2,14 +2,13 @@ package trianne.dicoding.moviecataloguev4;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.provider.Settings;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -28,6 +27,7 @@ import retrofit2.Response;
 import trianne.dicoding.moviecataloguev4.adapter.MovieAdapter;
 import trianne.dicoding.moviecataloguev4.api.APIService;
 import trianne.dicoding.moviecataloguev4.api.Server;
+import trianne.dicoding.moviecataloguev4.db.DatabaseContract;
 import trianne.dicoding.moviecataloguev4.entity.Movies;
 import trianne.dicoding.moviecataloguev4.entity.Results;
 
@@ -40,31 +40,18 @@ public class MainActivity extends AppCompatActivity
     ProgressDialog loading;
     APIService apiService;
 
-    private final String api_key = "130d9a6505bc83ef1d861c00ffc4bcc8";
-    private final String language = "en-US";
-    private final String sort_by = "popularity.desc";
-    private final String include_adult = "false";
-    private final String include_video = "false";
+    //private final String api_key = "130d9a6505bc83ef1d861c00ffc4bcc8";
+    //private final String language = "en-US";
     private final String page = "1";
+    private final String sort_by = "popularity.desc";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        rvMovies = findViewById(R.id.rv_movies);
-
-        apiService = Server.getAPIService();
-
-        adapter = new MovieAdapter(getApplicationContext(), listMovies);
-
-        rvMovies.setHasFixedSize(true);
-        rvMovies.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        rvMovies.setAdapter(adapter);
-
-        refresh();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -74,6 +61,32 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        setVariable();
+        if(savedInstanceState!=null){
+            ArrayList<Movies> list;
+            list = savedInstanceState.getParcelableArrayList("list_movie");
+            adapter = new MovieAdapter(getApplicationContext(), list);
+            rvMovies.setAdapter(adapter);
+        }
+        else {
+            refresh();
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelableArrayList("list_movie", new ArrayList<>(listMovies));
+    }
+
+    private void setVariable () {
+        rvMovies = findViewById(R.id.rv_movies);
+        apiService = Server.getAPIService();
+        adapter = new MovieAdapter(getApplicationContext(), listMovies);
+        rvMovies.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        rvMovies.setHasFixedSize(true);
+        rvMovies.setAdapter(adapter);
     }
 
     @Override
@@ -110,12 +123,11 @@ public class MainActivity extends AppCompatActivity
                 return false;
             }
         });
-
         return true;
     }
 
     public void searchMovie(String keyword){
-        apiService.getSearchMovie(api_key, language, keyword, page, include_adult).enqueue(new Callback<Results>() {
+        apiService.getSearchMovie(DatabaseContract.API_KEY, DatabaseContract.LANG, keyword, page).enqueue(new Callback<Results>() {
             @Override
             public void onResponse(Call<Results> call, Response<Results> response) {
                 if (response.isSuccessful()){
@@ -139,7 +151,7 @@ public class MainActivity extends AppCompatActivity
     private void refresh(){
         loading = ProgressDialog.show(this, null, "Please wait...", true, false);
 
-        apiService.getAllMovies(api_key, language, sort_by, include_adult, include_video, page).enqueue(new Callback<Results>() {
+        apiService.getAllMovies(DatabaseContract.API_KEY, DatabaseContract.LANG, sort_by, page).enqueue(new Callback<Results>() {
             @Override
             public void onResponse(Call<Results> call, Response<Results> response) {
                 if (response.isSuccessful()){
@@ -162,19 +174,24 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-    //ini cara bikin localization!!!
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_settings){
-            Intent mIntent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
-            startActivity(mIntent);
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            Intent most = new Intent(getApplicationContext(), SettingsActivity.class);
+            startActivity(most);
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_np) {
@@ -198,4 +215,3 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 }
-

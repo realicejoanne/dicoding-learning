@@ -28,4 +28,8 @@
     <string name="type_title">Search movie…</string>
     <string name="search">Search</string>
 
+    <!-- REMINDER -->
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="release_reminder">Release Reminder</string>
+
 </resources>

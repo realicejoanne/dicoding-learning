@@ -18,16 +18,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <provider
-            android:name="trianne.dicoding.moviecataloguev4.provider.FavoriteProvider"
+            android:name=".provider.FavoriteProvider"
             android:authorities="trianne.dicoding.moviecataloguev4"
             android:exported="true"
             android:readPermission="trianne.dicoding.moviecataloguev4.READ_DATABASE"
             android:writePermission="trianne.dicoding.moviecataloguev4.WRITE_DATABASE" />
 
         <activity
-            android:name="trianne.dicoding.moviecataloguev4.MainActivity"
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,13 +34,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="trianne.dicoding.moviecataloguev4.DetailActivity"/>
-
-        <activity android:name="trianne.dicoding.moviecataloguev4.FavoriteActivity" />
-        <activity android:name="trianne.dicoding.moviecataloguev4.NowplayingActivity" />
-        <activity android:name="trianne.dicoding.moviecataloguev4.UpcomingActivity"/>
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".NowplayingActivity" />
+        <activity android:name=".UpcomingActivity" />
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>

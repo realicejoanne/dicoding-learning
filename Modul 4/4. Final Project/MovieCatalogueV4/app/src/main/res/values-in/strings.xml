@@ -28,4 +28,8 @@
     <string name="type_title">Cari film…</string>
     <string name="search">Cari</string>
 
+    <!-- REMINDER -->
+    <string name="daily_reminder">Pengingat Harian</string>
+    <string name="release_reminder">Pengingat Rilis Film</string>
+
 </resources>

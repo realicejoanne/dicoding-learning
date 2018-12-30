@@ -19,6 +19,7 @@ import trianne.dicoding.moviecataloguev4.R;
 import trianne.dicoding.moviecataloguev4.entity.Movies;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
+    public final static String EXTRA_MOVIE = "movie"; //important
     private Context context;
     private List<Movies> listMovies;
 
