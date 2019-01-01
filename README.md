@@ -30,16 +30,13 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 		* App 1 penting untuk projek modul 1 (list viewnya)
 		* App 2 penting untuk projek modul 1 (fitur search)
 - [x] Modul 2 Application UI and UX
-	* View dan ViewGroup
 	* RecyclerView
 		* Di modul masih banyak code yang ngaco sehingga banyak errornya
 		* Penting untuk projek modul 2 (cardviewnya)
-	* Action Bar
 	* Navigation Drawer
-		* Tantangan judul di action bar supaya bisa tetap terjaga ketika terjadi perubahan konfigurasi nanti ikuti [link ini](https://github.com/dicodingacademy/a14-made-labs2/tree/master/04.Navigation/MyNavigationDrawer)
+		* Tantangan judul di action bar supaya bisa tetap terjaga ketika terjadi perubahan konfigurasi nanti ikuti [link ini](https://github.com/dicodingacademy/a14-made-labs2/tree/master/04.Navigation/MyNavigationDrawer) :red:
 	* Localization
 		* Penting untuk projek modul 2 (intent localization)
-	* Pengujian UI dengan Espresso
 - [x] Modul 3 Local Storage Data
 	* Read and Write File
 		* Karena penting jadi pelajari lagi
@@ -47,10 +44,10 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 	* SoundPool dan Media Player
 		* Cari cara gimana biar media playernya bisa utk mp3
 		* Bug gimana biar udah distop tapi bisa play lagi media playernya dari awal bukan kayak dipause (service bisa tapi malah jadi kayak dipause)
-		* Tantangan tambah fungsi pause
-		* Tantangan bikin aplikasi streaming radio
+		* Tantangan tambah fungsi pause :red:
+		* Tantangan bikin aplikasi streaming radio :red:
 	* SharedPreferences
-		* Belum paham cara kerjanya
+		* Penting untuk projek modul 3 yang kedua (bikin sharedpreferences)
 	* Penyimpanan Data dengan Menggunakan SQLite
 		* Karena penting jadi pelajari lagi
 		* Penting untuk kedua projek modul 3
@@ -63,7 +60,7 @@ __Materi yang harus dipelajari lebih dalam lagi:__
 		* Bug di aplikasi favoritemovie pas klik detail ga sesuai dengan film yang diklik
 - [x] Modul 4 Extended Application
 	* Android Widgets
-		* Bug entah kenapa fotonya ngga muncul atau tiba2 outofmemoryexception
+		* Bug entah kenapa fotonya ngga muncul atau tiba2 outofmemoryexception, sementara bisa pake Glide.asBitmap()
 		* App 2 penting untuk projek modul 4 (stack widgetnya)
 	* Android Notification
 		* App 1 penting untuk projek modul 4
