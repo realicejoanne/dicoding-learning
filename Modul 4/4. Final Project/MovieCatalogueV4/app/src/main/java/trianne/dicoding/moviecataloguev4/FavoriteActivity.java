@@ -18,7 +18,6 @@ import trianne.dicoding.moviecataloguev4.adapter.FavoriteAdapter;
 import static trianne.dicoding.moviecataloguev4.db.DatabaseContract.FavoriteColumns.CONTENT_URI;
 
 public class FavoriteActivity extends AppCompatActivity {
-
     RecyclerView rvMovies;
     ProgressBar progressBar;
 

@@ -24,6 +24,11 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <!-- SETTINGS -->
+    <string name="language">Change Language</string>
+    <string name="language_settings">Language Settings</string>
+    <string name="reminder_settings">Reminder Settings</string>
+
     <!-- SEARCH -->
     <string name="type_title">Search movie…</string>
     <string name="search">Search</string>
@@ -31,10 +36,10 @@
     <!-- REMINDER -->
     <string name="daily_reminder">Daily Reminder</string>
     <string name="release_reminder">Release Reminder</string>
-    <string name="daily_save_reminder">Save Daily Reminder</string>
-    <string name="daily_cancel_reminder">Cancel Daily Reminder</string>
-    <string name="release_save_reminder">Save Release Reminder</string>
-    <string name="release_cancel_reminder">Cancel Release Reminder</string>
+    <string name="daily_save_reminder">Saved Daily Reminder</string>
+    <string name="daily_cancel_reminder">Cancelled Daily Reminder</string>
+    <string name="release_save_reminder">Saved Release Reminder</string>
+    <string name="release_cancel_reminder">Cancelled Release Reminder</string>
 
     <!-- WIDGET -->
     <string name="appwidget_text">EXAMPLE</string>

@@ -36,23 +36,17 @@ public final class DatabaseContract {
 
     //important!
     public final static String PREF_NAME = "reminderPreferences";
-    public static final String LINK_IMAGE = "http://image.tmdb.org/t/p/w185/";
     public static final String LANG = "en-US";
     public static final String API_KEY = "130d9a6505bc83ef1d861c00ffc4bcc8";
 
-    public static final String KEY_HEADER_UPCOMING_REMINDER = "upcomingReminder";
-    public static final String KEY_HEADER_DAILY_REMINDER = "dailyReminder";
+    //settings
+    public static final String KEY_UPCOMING_REMINDER = "upcomingReminder";
+    public static final String KEY_DAILY_REMINDER = "dailyReminder";
     public static final String KEY_FIELD_UPCOMING_REMINDER = "checkedUpcoming";
     public static final String KEY_FIELD_DAILY_REMINDER = "checkedDaily";
     public final static String KEY_REMINDER_DAILY = "DailyTime";
     public final static String KEY_REMINDER_MESSAGE_RELEASE = "reminderMessageRelease";
     public final static String KEY_REMINDER_MESSAGE_DAILY = "reminderMessageDaily";
-
-    public static final String EXTRA_MESSAGE_PREF = "message";
-    public static final String EXTRA_MESSAGE_RECEIVE = "messageRelease";
-
-    public static final String EXTRA_TYPE_PREF = "type";
-    public static final String EXTRA_TYPE_RECEIVE = "typeRelease";
 
     public static final String TYPE_REMINDER_PREF = "reminderAlarm";
     public static final String TYPE_REMINDER_RECEIVE = "reminderAlarmRelease";

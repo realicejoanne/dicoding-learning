@@ -24,6 +24,11 @@
     <string name="navigation_drawer_open">Buka navigation drawer</string>
     <string name="navigation_drawer_close">Tutup navigation drawer</string>
 
+    <!-- SETTINGS -->
+    <string name="language">Ubah Bahasa</string>
+    <string name="language_settings">Pengaturan Bahasa</string>
+    <string name="reminder_settings">Pengaturan Pengingat</string>
+
     <!-- SEARCH -->
     <string name="type_title">Cari film…</string>
     <string name="search">Cari</string>

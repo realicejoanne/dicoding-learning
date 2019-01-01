@@ -48,8 +48,8 @@ public class ReminderReleaseReceiver extends BroadcastReceiver {
         AlarmManager alarmManager = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
 
         Intent intent = new Intent(context, ReminderReleaseReceiver.class);
-        intent.putExtra(DatabaseContract.EXTRA_MESSAGE_RECEIVE,message);
-        intent.putExtra(DatabaseContract.EXTRA_TYPE_RECEIVE,type);
+        intent.putExtra("messageRelease",message);
+        intent.putExtra("typeRelease",type);
 
         String timeArray[] = time.split(":");
         Calendar calendar = Calendar.getInstance();
@@ -78,6 +78,7 @@ public class ReminderReleaseReceiver extends BroadcastReceiver {
     private void getUpcomingMovie(final Context context){
         APIService service = RetrofitClient.getClient(BASE_URL_API).create(APIService.class);
         Call<Results> call = service.getUpcomingMovie(API_KEY, DatabaseContract.LANG);
+
         call.enqueue(new Callback<Results>() {
             @Override
             public void onResponse(Call<Results> call, Response<Results> response) {
@@ -108,11 +109,12 @@ public class ReminderReleaseReceiver extends BroadcastReceiver {
 
         Intent i = new Intent(context, DetailActivity.class);
         i.putExtra("title", item.getTitle());
-        i.putExtra("poster_path", item.getPosterPath());
-        i.putExtra("overview", item.getOverview());
         i.putExtra("release_date", item.getReleaseDate());
+        i.putExtra("overview", item.getOverview());
+        i.putExtra("poster_path", item.getPosterPath());
         PendingIntent pendingIntent = PendingIntent.getActivity(context, notifId, i, PendingIntent.FLAG_UPDATE_CURRENT);
 
+        //properties notif
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, message)
                 .setSmallIcon(R.drawable.ic_notifications_black_24dp)
                 .setContentTitle(title)

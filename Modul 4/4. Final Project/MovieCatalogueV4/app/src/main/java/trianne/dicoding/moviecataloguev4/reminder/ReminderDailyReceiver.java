@@ -18,18 +18,18 @@ import trianne.dicoding.moviecataloguev4.MainActivity;
 import trianne.dicoding.moviecataloguev4.R;
 import trianne.dicoding.moviecataloguev4.db.DatabaseContract;
 
-public class ReminderReceiver extends BroadcastReceiver {
-    private final int NOTIF_ID_REMINDER = 1;
+public class ReminderDailyReceiver extends BroadcastReceiver {
+    private final int NOTIF_ID_DAILY = 1;
 
-    public ReminderReceiver() {
+    public ReminderDailyReceiver() {
 
     }
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        String message = intent.getStringExtra(DatabaseContract.EXTRA_MESSAGE_PREF);
+        String message = intent.getStringExtra("message");
         String title = "Daily Reminder";
-        int notifId = NOTIF_ID_REMINDER;  //type.equal
+        int notifId = NOTIF_ID_DAILY;
 
         showReminderNotification(context,title,message,notifId);
     }
@@ -41,7 +41,7 @@ public class ReminderReceiver extends BroadcastReceiver {
         Intent intent = new Intent(context, MainActivity.class);
         PendingIntent pendingIntent = TaskStackBuilder.create(context)
                 .addNextIntent(intent)
-                .getPendingIntent(NOTIF_ID_REMINDER, PendingIntent.FLAG_UPDATE_CURRENT);
+                .getPendingIntent(NOTIF_ID_DAILY, PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context,message)
                 .setSmallIcon(R.drawable.ic_notifications_black_24dp)
                 .setContentTitle(title)
@@ -56,9 +56,9 @@ public class ReminderReceiver extends BroadcastReceiver {
     public void setReminder(Context context, String type, String time, String message){
         AlarmManager alarmManager = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
 
-        Intent intent = new Intent(context, ReminderReceiver.class);
-        intent.putExtra(DatabaseContract.EXTRA_MESSAGE_PREF,message);
-        intent.putExtra(DatabaseContract.EXTRA_TYPE_PREF,type);
+        Intent intent = new Intent(context, ReminderDailyReceiver.class);
+        intent.putExtra("message",message);
+        intent.putExtra("type",type);
 
         String timeArray[] = time.split(":");
         Calendar calendar = Calendar.getInstance();
@@ -66,7 +66,7 @@ public class ReminderReceiver extends BroadcastReceiver {
         calendar.set(Calendar.MINUTE, Integer.parseInt(timeArray[1]));
         calendar.set(Calendar.SECOND,0);
 
-        int requestCode = NOTIF_ID_REMINDER;
+        int requestCode = NOTIF_ID_DAILY;
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context,requestCode,intent,0);
         alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
 
@@ -76,8 +76,8 @@ public class ReminderReceiver extends BroadcastReceiver {
     public void cancelReminder(Context context){
         AlarmManager alarmManager = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
 
-        Intent intent = new Intent(context,ReminderReceiver.class);
-        int requestCode = NOTIF_ID_REMINDER;
+        Intent intent = new Intent(context,ReminderDailyReceiver.class);
+        int requestCode = NOTIF_ID_DAILY;
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context,requestCode,intent,0);
         alarmManager.cancel(pendingIntent);
 

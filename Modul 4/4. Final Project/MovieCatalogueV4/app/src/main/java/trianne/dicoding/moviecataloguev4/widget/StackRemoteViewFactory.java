@@ -26,14 +26,15 @@ import trianne.dicoding.moviecataloguev4.entity.Favorite;
 import static trianne.dicoding.moviecataloguev4.db.DatabaseContract.FavoriteColumns.CONTENT_URI;
 
 public class StackRemoteViewFactory implements RemoteViewsService.RemoteViewsFactory {
-
     private ArrayList<Favorite> mWidgetItems = new ArrayList<>();
     private Context mContext;
 
+    //glide bug finally done
+    public static final String POSTER_PATH = "http://image.tmdb.org/t/p/w185/";
+
     StackRemoteViewFactory(Context context, Intent intent) {
         mContext = context;
-        int mAppWidgetId = intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,
-                AppWidgetManager.INVALID_APPWIDGET_ID);
+        int mAppWidgetId = intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID);
     }
 
     public void onCreate() {
@@ -44,6 +45,7 @@ public class StackRemoteViewFactory implements RemoteViewsService.RemoteViewsFac
     public void onDataSetChanged() {
         mWidgetItems.clear();
         final long identityToken = Binder.clearCallingIdentity();
+
         Cursor cursor = mContext.getContentResolver().query(CONTENT_URI, null, null, null, null, null);
 
         if (cursor != null && cursor.moveToFirst()) {
@@ -75,26 +77,28 @@ public class StackRemoteViewFactory implements RemoteViewsService.RemoteViewsFac
     public RemoteViews getViewAt(int position) {
         Favorite currentMovieFavorite;
         Bundle extras = new Bundle();
-        Bitmap bmp = null;
+        Bitmap img = null;
         String title = null;
         try {
             currentMovieFavorite = mWidgetItems.get(position);
-            bmp = Glide.with(mContext)
+
+            //pake bitmap biar ga berat
+            img = Glide.with(mContext)
                     .asBitmap()
-                    .load(DatabaseContract.LINK_IMAGE + currentMovieFavorite.getPoster())
+                    .load(POSTER_PATH + currentMovieFavorite.getPoster())
                     .into(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).get();
                     //.error(new ColorDrawable(mContext.getResources().getColor(R.color.colorPrimaryDark)))
 
             title = currentMovieFavorite.getTitle();
             extras.putString(MovieAdapter.EXTRA_MOVIE,currentMovieFavorite.getTitle());
-
         }
         catch (InterruptedException | ExecutionException | IndexOutOfBoundsException e) {
             Log.d("Widget Error", "error");
         }
 
+        //gunakan remoteview
         RemoteViews rv = new RemoteViews(mContext.getPackageName(), R.layout.items_widget);
-        rv.setImageViewBitmap(R.id.imgWidget, bmp);
+        rv.setImageViewBitmap(R.id.imgWidget, img);
         rv.setTextViewText(R.id.tvWidget, title);
         Intent fillInIntent = new Intent();
         fillInIntent.putExtras(extras);

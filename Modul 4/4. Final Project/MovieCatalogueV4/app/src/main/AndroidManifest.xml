@@ -51,7 +51,7 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/favorite_widget_info" />
         </receiver>
-        <receiver android:name=".reminder.ReminderReceiver"
+        <receiver android:name=".reminder.ReminderDailyReceiver"
             android:enabled="true"
             android:exported="true" />
         <receiver android:name=".reminder.ReminderReleaseReceiver"
